@@ -28,7 +28,7 @@ class activateCode(models.Model):
     activate code
     """
     code = models.CharField(max_length=256)
-    user = models.OneToOneField('User')
+    user = models.OneToOneField('User',on_delete=models.CASCADE)
     c_time = models.DateTimeField(auto_now_add=True)
     
     def __unicode__(self):
@@ -45,7 +45,7 @@ class changePasswordCode(models.Model):
     change password code
     """
     code = models.CharField(max_length=256)
-    user = models.OneToOneField('User')
+    user = models.OneToOneField('User',on_delete=models.CASCADE)
     c_time = models.DateTimeField(auto_now_add=True)
     
     def __unicode__(self):
