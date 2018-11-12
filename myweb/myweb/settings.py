@@ -124,3 +124,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     ]
+
+# expired days
+CONFIRM_DAYS = 1
+
+
+#email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtpdm.aliyun.com'
+EMAIL_PORT = '80'
+EMAIL_HOST_USER = 'gxu@mail.wenchao.fun'
+EMAIL_HOST_PASSWORD = 'AliHwc199460'
+
