@@ -15,7 +15,7 @@ class User(models.Model):
     isActivated = models.BooleanField(default=False)  # has/hasn't click the activatationlink
     isStu = models.BooleanField(default=False)   # is student or not 
 
-    def __unicode__(self):
+    def __str__(self):
         return self.nickname
     
     class Meta:
@@ -31,7 +31,7 @@ class activateCode(models.Model):
     user = models.OneToOneField('User',on_delete=models.CASCADE)
     c_time = models.DateTimeField(auto_now_add=True)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.user.nickname + ":" + self.code
     
     class Meta:
@@ -48,7 +48,7 @@ class changePasswordCode(models.Model):
     user = models.OneToOneField('User',on_delete=models.CASCADE)
     c_time = models.DateTimeField(auto_now_add=True)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.user.nickname + ":" + self.code
     
     class Meta:

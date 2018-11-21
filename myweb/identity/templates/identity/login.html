@@ -7,7 +7,7 @@
 {% block content %}
     <div class="container">
         <div class="col-md-4 col-md-offset-4">
-          <form class='form-login' action="/login/" method="post">
+          <form class='form-login' action="/identity/login/" method="post">
 
               {% if message %}
                   <div class="alert alert-warning">{{ message }}</div>
@@ -35,7 +35,7 @@
               <button type="reset" class="btn btn-default pull-left">重置</button>
               <button type="submit" class="btn btn-primary pull-right">提交</button>
 			  <div class="form-group">
-			      <a href="/change_password/">忘记密码?</a>
+			      <a href="/identity/changepassword/">忘记密码?</a>
 			  </div>
 			  
 
